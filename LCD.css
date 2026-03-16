@@ -1,0 +1,510 @@
+@font-face {
+    font-family: "ShinGoPro-M";
+    src: url("fonts/a-otf-shin-go-pro-cufonfonts/AOTFShinGoProMedium.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "ShinGoPro-DB";
+    src: url("fonts/a-otf-shin-go-pro-cufonfonts/AOTFShinGoProDeBold.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "ShinGoPro-B";
+    src: url("fonts/a-otf-shin-go-pro-cufonfonts/AOTFShinGoProBold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Helvetica";
+    src: url("fonts/Helvetica/Helvetica.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Helvetica-DB";
+    src: url("fonts/Helvetica/Helvetica.ttf") format("truetype");
+    -webkit-text-stroke: 2px #000 ;
+}
+
+@font-face {
+    font-family: "Helvetica-B";
+    src: url("fonts/Helvetica/Helvetica-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Frutiger-B";
+    src: url("fonts/Frutiger_bold.ttf") format("truetype");
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica-B', 'ShinGoPro-DB';
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+#all {
+    background-color: #ebebeb;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    margin: 0;
+    position: absolute;
+}
+
+#ue {
+    background-color: #adadad;
+    width: 100%;
+    height: 30%;
+    border-bottom: solid #858585 0.3vw;
+}
+
+#syubetu {
+    font-family: 'Helvetica-B','ShinGoPro-B';
+    font-size: 5vw;
+    line-height: 100%;
+    position: absolute;
+    top: 1.5%;
+    left: 1%;
+}
+
+.syubetu-ura {
+    color: #fff;
+    -webkit-text-stroke: 0.7vw #fff;
+}
+
+.syubetu-omote {
+    color: rgb(167, 0, 189);
+    position: absolute;
+    top: 0%;
+    left: 0%;
+}
+
+#syubetu-en {
+    font-size: 5vw;
+    display: inline-block;
+    transform: scale(1,1.0);
+    font-style: italic;
+    line-height: 90%;
+    margin: 0vw 0 0 0vw;
+    text-align: center;
+}
+
+#next {
+    margin-right: -1%;
+    position: absolute;
+    font-size: 3.5vw;
+    top: 18.5%;
+    right: 82.3%;
+}
+
+#next p {
+    position: relative;
+    text-align: center;
+    line-height: 100%;
+    width: 100%;
+    transform: translateY(50%);
+}
+
+#for {
+    font-size: 3.4vw;
+    position: absolute;
+    top: -2.6%;
+    left: 20%;
+}
+
+#for p {
+    position: relative;
+    text-align: center;
+    line-height: 100%;
+    width: 100%;
+    transform: translateY(62%);
+}
+
+#sns {
+    background-color: #fff;
+    width: 63%;
+    height: 20%;
+    position: absolute;
+    top: 8%;
+    left: 20%;
+    border: 0.5vw solid #ebebeb;
+    border-image: linear-gradient(to bottom, #ebebeb 0%, #5c5c5c 100%);
+    border-image-slice: 1;
+}
+
+#station-name {
+    display: flex;
+    height: 100%;
+}
+
+#numbering {
+    font-family: 'Frutiger-B';
+    text-align: center;
+    margin: 0.9% 0 0.9% 0.9%;
+}
+
+#three-code {
+    background-color: black;
+    width: 8.2vw;
+    height: 100%;
+    border-radius: 15%;
+}
+
+#three-code-text {
+    position: relative;
+    color: #fff;
+    font-size: 2.6vw;
+    line-height: 100%;
+}
+
+#numbering1 {
+    height: max-content;
+    width: 5.56vw;
+    height: 5.56vw;
+    aspect-ratio: 1/1;
+    border: 0.7vw solid #00bae8;
+    border-radius: 11%;
+    background-color: #00bae8;
+    margin: 0 0% 5% 8%;
+}
+
+#numbering-back {
+    aspect-ratio: 1/1;
+    background-color: #fff;
+    margin: -1%;
+}
+
+#numbering2 {
+    line-height: 100%;
+    font-size: 2.6vw;
+}
+
+#numbering3 {
+    line-height: 100%;
+    margin-top: -11%;
+    font-size: 3.6vw;
+}
+
+#sn {
+    width: 100%;
+    font-size: 8.7vw;
+    color: #00730a;
+    font-family: 'Helvetica','ShinGoPro-DB';
+}
+
+#sn p {
+    position: relative;
+    text-align: center;
+    line-height: 100%;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    white-space: nowrap;
+}
+
+#sn .ue_hi {
+    letter-spacing: -0.04em;
+    transform: scale(1, 1) translate(0%,-50%);
+}
+
+#sn_en {
+    display: block;
+    font-size: 8.8vw;
+    letter-spacing: -0.04em;
+    -webkit-text-stroke: 0.25vw #00730a;
+}
+
+/*#sn .ue_en {
+    transform: scale(0.77, 1) translate(-14%,-50%);
+}*/
+
+#departure {
+    display: none;
+}
+
+#departure .ue_ja {
+    font-size: 4vw;
+    line-height: 100%;
+    left: 85%;
+    top: 22%;
+    position: absolute;
+}
+
+#departure .ue_en {
+    font-size: 4vw;
+    line-height: 100%;
+    left: 13%;
+    top: 22%;
+    position: absolute;
+}
+
+#car-number-container {
+    position: absolute;
+    top: 1%;
+    right: 0.5%;
+}
+
+#car-number {
+    width: 7vw;
+    height: 7vw;
+    position: relative;
+    background-color: #fff;
+    font-size: 6vw;
+    border-radius: 0.8vw;
+    text-align: center;
+}
+
+#car-number-text {
+    text-align: end;
+    line-height: 100%;
+    font-size: 1.7vw;
+    margin-top: 0.3vw;
+}
+
+#car-number-text-en {
+    position: relative;
+    text-align: end;
+    line-height: 100%;
+    font-size: 1.7vw;
+    bottom: 6.5vw;
+    right: 7.5vw;
+}
+
+#genzai-jikoku {
+    position: absolute;
+    top: 19.5%;
+    right: 0.5%;
+    text-align: center;
+}
+
+#genzai-jikoku-text {
+    font-size: 1.7vw;
+    margin-bottom: 0.3vw;
+    line-height: 100%;
+}
+
+#time {
+    display: inline-block;
+    position: relative;
+    text-align: end;
+    width: 8.5vw;
+    height: 3.3vw;
+    line-height: 100%;
+    background-color: #fff;
+    border-radius: 0.8vw;
+    font-size: 3.2vw;
+    font-family: 'Helvetica';
+    transform: scale(1,1.1);
+    padding-right: 0.4vw;
+}
+
+
+#eight_stations {
+    line-height: 100%;
+}
+
+#stick {
+    display: flex;
+    position: relative;
+    top: 18vw;
+    width: 97%;
+    height: 5vw;
+    background-color: #00bae8;
+    vertical-align: middle;
+}
+
+/* 右側に三角、左側に同高さの長方形を付けた五角形にする
+   - ::before が長方形（四角）部分
+   - ::after が三角部分（右端）
+*/
+#stick::before {
+    content: "";
+    position: absolute;
+    /* 長方形の右端が要素の右端にぴったり合うように配置 */
+    left: calc(100% - 4.5vw);
+    top: 0;
+    width: 4.5vw;
+    height: 100%;
+    background-color: #00bae8;
+    border-top-right-radius: 0.1vw;
+    border-bottom-right-radius: 0.1vw;
+}
+
+#stick::after {
+    content: "";
+    position: absolute;
+    left: 100%;
+    border-top: 2.5vw solid transparent;
+    border-bottom: 2.5vw solid transparent;
+    border-left: 3vw solid #00bae8;
+}
+
+/* 終点付近では矢印（三角＋四角）を非表示にするためのクラス */
+#stick.no-arrow::after,
+#stick.no-arrow::before {
+    content: none;
+    display: none;
+}
+
+/* 右端固定だが終着が大宮以外の場合、三角＋四角を薄いグレーにする */
+#stick.triangle-muted::after {
+    border-left-color: #a4a4a4;
+}
+#stick.triangle-muted::before {
+    background-color: #a4a4a4;
+}
+/* 右端固定だが終着が大宮以外の場合、三角を薄いグレーにする */
+#stick.triangle-muted::after {
+    border-left-color: #a4a4a4;
+}
+
+.first_station_time {
+    margin: 0.6% 0 0.6% 10%;
+    width: 5.5vw;
+    font-size: 4vw;
+    line-height: 100%;
+    text-align: center;
+    background-color: #b1b1b1;
+}
+
+.after_next_station_time {
+    margin: 0.6% 0 0.6% 5.5%;
+    width: 5.5vw;
+    font-size: 4vw;
+    background-color: #fff;
+    line-height: 100%;
+    text-align: center;
+}
+
+#stations_ja {
+    position: absolute;
+    font-family: 'ShinGoPro-M';
+    font-size: 4vw;
+    writing-mode: vertical-lr;
+    text-align: end;
+    line-height: 100%;
+    bottom: 23vw;
+}
+
+#stations_en {
+    position: relative;
+    display: inline;
+    font-family: 'Helvetica';
+    font-size: 3.8vw;
+    line-height: 100%;
+    text-align: left;
+    white-space: nowrap;
+    display: none;
+}
+
+#stations_en p {
+    transform-origin: bottom left; /* 左下を固定して回転 */
+}
+
+#first_station_en {
+    position: absolute;
+    transform: rotate(-70deg);
+    top: 8vw;
+    left: 14vw;
+    color: #a4a4a4;
+}
+
+#second_station_en {
+    position: absolute;
+    transform: rotate(-70deg);
+    top: 7.9vw;
+    left: 25vw;
+}
+
+#third_station_en {
+    position: absolute;
+    transform: rotate(-70deg);
+    top: 7.85vw;
+    left: 35.5vw;
+}
+
+#fourth_station_en {
+    position: absolute;
+    transform: rotate(-70deg);
+    top: 8.5vw;
+    left: 46.5vw;
+}
+
+#fifth_station_en {
+    position: absolute;
+    transform: rotate(-70deg);
+    top: 8vw;
+    left: 57vw;
+}
+
+#sixth_station_en {
+    position: absolute;
+    transform: rotate(-70deg);
+    top: 7.8vw;
+    left: 68vw;
+}
+
+#seventh_station_en {
+    position: absolute;
+    transform: rotate(-70deg);
+    top: 7.8vw;
+    left: 78.5vw;
+}
+
+#eighth_station_en {
+    position: absolute;
+    transform: rotate(-70deg);
+    top: 8.5vw;
+    left: 89vw;
+}
+
+.first_station {
+    margin-left: 10.5vw;
+    margin-right: 6.82vw;
+}
+
+.after_next_station {
+    margin-right: 6.82vw;
+}
+
+#numberings {
+    position: absolute;
+    top: 33.1vw;
+    display: flex;
+    font-size: 2vw;
+    line-height: 100%;
+    width: 100%;
+    list-style: none;
+}
+
+.first_numbering {
+    margin-left: 9.8%;
+    margin-right: 5.4%;
+}
+
+.after_numbering {
+    margin-right: 5.38%;
+}
+
+#settings-panel {
+    position: absolute;
+    top: 0.5%;
+    left: 0.5%;
+    display: flex;
+}
+
+select {
+    font-size: 1vw;
+    margin-right: 0.5vw;
+    padding: 0.2vw;
+    border: none;
+}

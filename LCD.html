@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=2000">
+    <title>LCD</title>
+    <link rel="stylesheet" href="LCD.css">
+</head>
+
+<body>
+    <div id="all">
+        <div id="ue">
+            <div id="syubetu">
+                <div class="ue_ja">
+                    <p class="syubetu-ura"  >各駅<br>停車</p>
+                    <p class="syubetu-omote">各駅<br>停車</p>
+                </div>
+                <div class="ue_en" id="syubetu-en">
+                    <p class="syubetu-ura"  >Local</p>
+                    <p class="syubetu-omote">Local</p>
+                </div>
+                <div class="ue_hi">
+                    <p class="syubetu-ura"  >各駅<br>停車</p>
+                    <p class="syubetu-omote">各駅<br>停車</p>
+                </div>
+            </div>
+            <div id="for">
+                <p class="ue_ja">品川 行</p>
+                <p class="ue_en">for Shinagawa</p>
+                <p class="ue_hi">品川 行</p>
+            </div>
+            <div id="next">
+                <p class="ue_ja">次は</p>
+                <p class="ue_en">Next</p>
+                <p class="ue_hi">つぎは</p>
+            </div>
+            <div id="sns">
+                <div id="station-name">
+                    <div id="numbering">
+                        <div id="three-code">
+                            <p id="three-code-text">YHM</p>
+                            <div id="numbering1">
+                                <div id="numbering-back">
+                                    <p id="numbering2">JK</p>
+                                    <p id="numbering3">12</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="sn">
+                        <p class="ue_ja" id="sn_ja"></p>
+                        <p class="ue_en" id="sn_en"></p>
+                        <p class="ue_hi" id="sn_hi"></p>
+                    </div>
+                </div>
+            </div>
+            <div id="departure">
+                <p class="ue_ja">行</p>
+                <p class="ue_en">for</p>
+            </div>
+            <div id="car-number-container">
+                <p id="car-number">1</p>
+                <p id="car-number-text" class="ue_ja">号車</p>
+                <p id="car-number-text-en" class="ue_en">Car No.</p>
+                <p id="car-number-text" class="ue_hi">号車</p>
+            </div>
+            <div id="genzai-jikoku">
+                <div>
+                    <p id="genzai-jikoku-text" class="ue_ja">現在時刻</p>
+                    <p id="genzai-jikoku-text" class="ue_en">Time</p>
+                    <p id="genzai-jikoku-text" class="ue_hi">現在時刻</p>
+                </div>
+                <p id="time"></p>
+            </div>
+        </div>
+        <div id="sita">
+            <div id="eight_stations">
+                <div id="stick">
+                    <p class="first_station_time"></p>
+                    <p class="after_next_station_time"></p>
+                    <p class="after_next_station_time"></p>
+                    <p class="after_next_station_time"></p>
+                    <p class="after_next_station_time"></p>
+                    <p class="after_next_station_time"></p>
+                    <p class="after_next_station_time"></p>
+                    <p class="after_next_station_time"></p>
+                </div>
+                <div id="stations_ja">
+                    <p class="first_station">大　船</p>
+                    <p class="after_next_station">本郷台</p>
+                    <p class="after_next_station">港南台</p>
+                    <p class="after_next_station">洋光台</p>
+                    <p class="after_next_station">新杉田</p>
+                    <p class="after_next_station">磯　子</p>
+                    <p class="after_next_station">根　岸</p>
+                    <p class="after_next_station">山　手</p>
+                </div>
+                <div id="stations_en">
+                    <p id="first_station_en">Ōfuna</p>
+                    <p id="second_station_en">Hongōdai</p>
+                    <p id="third_station_en">Kōnandai</p>
+                    <p id="fourth_station_en">Yōkōdai</p>
+                    <p id="fifth_station_en">Shin-<br>　Sugita</p>
+                    <p id="sixth_station_en">Isogo</p>
+                    <p id="seventh_station_en">Negishi</p>
+                    <p id="eighth_station_en">Yamate</p>
+                </div>
+                <div id="numberings">
+                    <p class="first_numbering">JK-01</p>
+                    <p class="after_numbering">JK-02</p>
+                    <p class="after_numbering">JK-03</p>
+                    <p class="after_numbering">JK-04</p>
+                    <p class="after_numbering">JK-05</p>
+                    <p class="after_numbering">JK-06</p>
+                    <p class="after_numbering">JK-07</p>
+                    <p class="after_numbering">JK-08</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 設定パネル（div#all の下） -->
+    <div id="settings-panel" style="padding:10px; background:#f4f4f4; border-top:1px solid #ccc;">
+        <label>種別:
+            <select id="select-type">
+                <option value="local">各駅停車</option>
+                <option value="rapid">快速</option>
+                <option value="commuter">通勤快速</option>
+                <option value="special">特別快速</option>
+            </select>
+        </label>
+        <label style="margin-left:10px">始発駅:
+            <select id="select-start"></select>
+        </label>
+        <label style="margin-left:10px">終着駅:
+            <select id="select-end"></select>
+        </label>
+        <label style="margin-left:10px">号車:
+            <select id="select-car"></select>
+        </label>
+        <button id="applySettings" style="margin-left:10px;">設定</button>
+    </div>
+
+    <script src="LCD.js"></script>
+</body>
+
+</html>
