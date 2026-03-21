@@ -600,6 +600,35 @@ function updateDisplay(NextOrPrevious) {
     }
     over8 = 0;
 
+    // --- 乗り換え路線の表示を stations 配列に基づいて更新 ---
+    try {
+        const transferEl = document.getElementById('transfer');
+        if (transferEl) {
+            // 既存内容をクリアして、表示中の8スロット分の div を再生成する
+            transferEl.innerHTML = '';
+            for (let i = 0; i < 8; i++) {
+                const idx = displayedIndices[i];
+                const col = document.createElement('div');
+                if (Number.isFinite(idx) && idx >= 0 && idx < stations.length) {
+                    const transferArr = stations[idx][6] || [];
+                    // 空配列なら何も挿入しない（列は空のまま）
+                    transferArr.forEach((line) => {
+                        const p = document.createElement('p');
+                        if (line === "横浜市営地下鉄ブルーライン") {
+                            p.innerHTML = '横浜市営地下鉄<br>ブルーライン';
+                        } else {
+                            p.textContent = line;
+                        }
+                        col.appendChild(p);
+                    });
+                }
+                transferEl.appendChild(col);
+            }
+        }
+    } catch (e) {
+        console.warn('transfer render failed', e);
+    }
+
     // 時刻表示は以下でavailable/unavailableクラスを割り当てた後に再取得して更新する
 
 
