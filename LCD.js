@@ -1,51 +1,51 @@
 const stations = [
-    ["大　船", "Ōfuna", "おおふな", "01", "OFN", "0"],
-    ["本郷台", "Hongōdai", "ほんごうだい", "02", "", "4"],
-    ["港南台", "Kōnandai", "こうなんだい", "03", "", "3"],
-    ["洋光台", "Yōkōdai", "ようこうだい", "04", "", "3"],
-    ["新杉田", "Shin-Sugita", "しんすぎた", "05", "", "3"],
-    ["磯　子", "Isogo", "いそご", "06", "", "2"],
-    ["根　岸", "Negishi", "ねぎし", "07", "", "3"],
-    ["山　手", "Yamate", "やまて", "08", "", "3"],
-    ["石川町", "Ishikawachō", "いしかわちょう", "09", "", "2"],
-    ["関　内", "Kannai", "かんない", "10", "", "2"],
-    ["桜木町", "Sakuragichō", "さくらぎちょう", "11", "", "2"],
-    ["横　浜", "Yokohama", "よこはま", "12", "YHM", "3"],
-    ["東神奈川", "Higashi-Kanagawa", "ひがしかながわ", "13", "", "3"],
-    ["新子安", "Shin-Koyasu", "しんこやす", "14", "", "3"],
-    ["鶴　見", "Tsurumi", "つるみ", "15", "", "4"],
-    ["川　崎", "Kawasaki", "かわさき", "16", "KWS", "4"],
-    ["蒲　田", "Kamata", "かまた", "17", "", "3"],
-    ["大　森", "Ōmori", "おおもり", "18", "", "4"],
-    ["大井町", "Ōimachi", "おおいまち", "19", "", "3"],
-    ["品　川", "Shinagawa", "しながわ", "20", "SGW", "3"],
-    ["高輪ゲートウェイ", "Takanawa Gateway", "たかなわげーとうぇい", "21", "TGW", "2"],
-    ["田　町", "Tamachi", "たまち", "22", "", "2"],
-    ["浜松町", "Hamamatsuchō", "はままつちょう", "23", "HMC", "3"],
-    ["新　橋", "Shimbashi", "しんばし", "24", "SMB", "2"],
-    ["有楽町", "Yūrakuchō", "ゆうらくちょう", "25", "", "2"],
-    ["東　京", "Tōkyō", "とうきょう", "26", "TYO", "2"],
-    ["神　田", "Kanda", "かんだ", "27", "KND", "2"],
-    ["秋葉原", "Akihabara", "あきはばら", "28", "AKB", "2"],
-    ["御徒町", "Okachimachi", "おかちまち", "29", "", "2"],
-    ["上　野", "Ueno", "うえの", "30", "UEN", "2"],
-    ["鶯　谷", "Uguisudani", "うぐいすだに", "31", "", "2"],
-    ["日暮里", "Nippori", "にっぽり", "32", "NPR", "2"],
-    ["西日暮里", "Nishi-Nippori", "にしにっぽり", "33", "", "2"],
-    ["田　端", "Tabata", "たばた", "34", "", "2"],
-    ["上中里", "Kami-Nakazato", "かみなかざと", "35", "", "3"],
-    ["王　子", "Ōji", "おうじ", "36", "", "2"],
-    ["東十条", "Higashi-Jūjō", "ひがしじゅうじょう", "37", "", "3"],
-    ["赤　羽", "Akabane", "あかばね", "38", "ABN", "3"],
-    ["川　口", "Kawaguchi", "かわぐち", "39", "", "4"],
-    ["西川口", "Nishi-Kawaguchi", "にしかわぐち", "40", "", "3"],
-    ["蕨", "Warabi", "わらび", "41", "", "2"],
-    ["南浦和", "Minami-Urawa", "みなみうらわ", "42", "", "4"],
-    ["浦　和", "Urawa", "うらわ", "43", "URW", "2"],
-    ["北浦和", "Kita-Urawa", "きたうらわ", "44", "", "3"],
-    ["与　野", "Yono", "よ　の", "45", "", "2"],
-    ["さいたま新都心", "Saitama-Shintoshin", "さいたましんとしん", "46", "", "2"],
-    ["大　宮", "Ōmiya", "おおみや", "47", "OMY", "3"]
+    ["大　船", "Ōfuna", "おおふな", "01", "OFN", "0", ["東海道線", "横須賀線", "湘南新宿ライン", "湘南モノレール"]],
+    ["本郷台", "Hongōdai", "ほんごうだい", "02", "", "4", []],
+    ["港南台", "Kōnandai", "こうなんだい", "03", "", "3", []],
+    ["洋光台", "Yōkōdai", "ようこうだい", "04", "", "3", []],
+    ["新杉田", "Shin-Sugita", "しんすぎた", "05", "", "3", ["シーサイドライン"]],
+    ["磯　子", "Isogo", "いそご", "06", "", "2", []],
+    ["根　岸", "Negishi", "ねぎし", "07", "", "3", []],
+    ["山　手", "Yamate", "やまて", "08", "", "3", []],
+    ["石川町", "Ishikawachō", "いしかわちょう", "09", "", "2", []],
+    ["関　内", "Kannai", "かんない", "10", "", "2", ["横浜市営地下鉄ブルーライン"]],
+    ["桜木町", "Sakuragichō", "さくらぎちょう", "11", "", "2", ["横浜市営地下鉄ブルーライン"]],
+    ["横　浜", "Yokohama", "よこはま", "12", "YHM", "3", ["東海道線", "上野東京ライン", "湘南新宿ライン", "横須賀線", "京急線", "東急東横線", "相鉄線", "みなとみらい線", "横浜市営地下鉄ブルーライン"]],
+    ["東神奈川", "Higashi-Kanagawa", "ひがしかながわ", "13", "", "3", ["横浜線"]],
+    ["新子安", "Shin-Koyasu", "しんこやす", "14", "", "3", []],
+    ["鶴　見", "Tsurumi", "つるみ", "15", "", "4", ["鶴見線"]],
+    ["川　崎", "Kawasaki", "かわさき", "16", "KWS", "4", ["東海道線", "南武線"]],
+    ["蒲　田", "Kamata", "かまた", "17", "", "3", ["東急多摩川線", "京急池上線"]],
+    ["大　森", "Ōmori", "おおもり", "18", "", "4", []],
+    ["大井町", "Ōimachi", "おおいまち", "19", "", "3", ["東急大井町線", "りんかい線"]],
+    ["品　川", "Shinagawa", "しながわ", "20", "SGW", "3", ["山手線（渋谷・新宿方面）", "東海道線", "横須賀線", "京急線"]],
+    ["高輪ゲートウェイ", "Takanawa Gateway", "たかなわげーとうぇい", "21", "TGW", "2", []],
+    ["田　町", "Tamachi", "たまち", "22", "", "2", ["山手線"]],
+    ["浜松町", "Hamamatsuchō", "はままつちょう", "23", "HMC", "3", ["東京モノレール", "大江戸線"]],
+    ["新　橋", "Shimbashi", "しんばし", "24", "SMB", "2", []],
+    ["有楽町", "Yūrakuchō", "ゆうらくちょう", "25", "", "2", []],
+    ["東　京", "Tōkyō", "とうきょう", "26", "TYO", "2", []],
+    ["神　田", "Kanda", "かんだ", "27", "KND", "2", []],
+    ["秋葉原", "Akihabara", "あきはばら", "28", "AKB", "2", []],
+    ["御徒町", "Okachimachi", "おかちまち", "29", "", "2", []],
+    ["上　野", "Ueno", "うえの", "30", "UEN", "2", []],
+    ["鶯　谷", "Uguisudani", "うぐいすだに", "31", "", "2", []],
+    ["日暮里", "Nippori", "にっぽり", "32", "NPR", "2", []],
+    ["西日暮里", "Nishi-Nippori", "にしにっぽり", "33", "", "2", []],
+    ["田　端", "Tabata", "たばた", "34", "", "2", []],
+    ["上中里", "Kami-Nakazato", "かみなかざと", "35", "", "3", []],
+    ["王　子", "Ōji", "おうじ", "36", "", "2", []],
+    ["東十条", "Higashi-Jūjō", "ひがしじゅうじょう", "37", "", "3", []],
+    ["赤　羽", "Akabane", "あかばね", "38", "ABN", "3", []],
+    ["川　口", "Kawaguchi", "かわぐち", "39", "", "4", []],
+    ["西川口", "Nishi-Kawaguchi", "にしかわぐち", "40", "", "3", []],
+    ["蕨", "Warabi", "わらび", "41", "", "2", []],
+    ["南浦和", "Minami-Urawa", "みなみうらわ", "42", "", "4", []],
+    ["浦　和", "Urawa", "うらわ", "43", "URW", "2", []],
+    ["北浦和", "Kita-Urawa", "きたうらわ", "44", "", "3", []],
+    ["与　野", "Yono", "よ　の", "45", "", "2", []],
+    ["さいたま新都心", "Saitama-Shintoshin", "さいたましんとしん", "46", "", "2", []],
+    ["大　宮", "Ōmiya", "おおみや", "47", "OMY", "3", []]
 ];
 
 
@@ -148,6 +148,7 @@ function exitDepartureMode() {
     UeLanguage = 1;
     applyUeLanguage();
     startUeCycle();
+
 }
 
 // --- 設定パネル初期化と適用処理 ---
@@ -253,6 +254,8 @@ function textSize() {
     if (p_en.textContent.length == 12) {
         if (p_en.innerText == "Higashi-Jūjō") {
             p_en.style.transform = null;
+        } else if (p_en.innerText == "Minami-Urawa") {
+            p_en.style.transform = "scale(0.97,1) translate(-1%,-50%)";
         } else {
             p_en.style.transform = "scale(0.92,1) translate(-4%,-50%)";
         }
@@ -275,6 +278,11 @@ function textSize() {
     } else {
         p_en.style.transform = null;
         p_en.style.letterSpacing = null;
+    }
+
+    if (p_hi.innerText == "いしかわちょう") {
+        p_hi.innerHTML = '<div style="font-size: 0.9em; transform: scale(1,0.95) translateY(28%); line-height:180%;">いしかわちょう<p style="font-size: 0.7em;">（もとまち・ちゅうかがい）</p></div>';
+        p_hi.style.transform = "scale(0.9,0.86) translate(-8%,-85%)";
     }
 };
 
@@ -489,61 +497,28 @@ function updateDisplay(NextOrPrevious) {
     const numberings = document.getElementById("numberings").querySelectorAll("p");
     let over8 = 1;
     const displayedIndices = [];
-        // Update stations_ja (常に実行して表示インデックスを埋める)
-        // ただし始発->終着が7駅以下の場合は右詰め表示して前方スロットを非表示にする
-        const startIdx = (window.userSettings && typeof window.userSettings.startIndex === 'number') ? window.userSettings.startIndex : currentIndex;
-        const smallCount = (endIdx - startIdx + 1) <= 7;
-        for (let i = 0; i < 8; i++) {
-            let index;
-            if (smallCount) {
-                // 右詰め: 前方の (8 - count) スロットは空にする
-                const count = endIdx - startIdx + 1;
-                if (i < 8 - count) {
-                    // 見た目を保持するために完全に消さず、全角空白や透明ナンバリングを設定する
-                    displayedIndices.push(NaN);
-                    // 駅名は全角空白で埋める
-                    jaStations[i].textContent = '\u3000';
-                    enStations[i].textContent = '\u3000';
-                    // ナンバリングは JK-00 にして透明化
-                    numberings[i].textContent = 'JK-00';
-                    numberings[i].style.color = 'transparent';
-                    // 所要時間も全角空白にし、背景は不可視風にする
-                    times[i].textContent = '\u3000';
-                    times[i].style.backgroundColor = '#b1b1b1';
-                    // クリアID/データ属性
-                    jaStations[i].id = "";
-                    numberings[i].id = "";
-                    times[i].id = "";
-                    jaStations[i].dataset.index = undefined;
-                    numberings[i].dataset.index = undefined;
-                    times[i].dataset.index = undefined;
-                    continue;
-                } else {
-                    index = startIdx + (i - (8 - count));
-                    // ensure visible
-                    jaStations[i].style.display = '';
-                    enStations[i].style.display = '';
-                    numberings[i].style.display = '';
-                    times[i].style.display = '';
-                    // リセット（透明化されている可能性があるため）
-                    numberings[i].style.color = '';
-                    times[i].style.backgroundColor = '';
-                }
-            } else {
-                index = displayBase - 1 + i; // 表示は displayBase の1つ前（現在地表示開始基準）を先頭にする
-                // ensure visible
-                jaStations[i].style.display = '';
-                enStations[i].style.display = '';
-                numberings[i].style.display = '';
-                times[i].style.display = '';
-            }
-            displayedIndices.push(index);
-            if (index < 0 || index >= stations.length) {
-                // 範囲外ならセルをクリア
-                jaStations[i].textContent = "";
-                enStations[i].textContent = "";
-                numberings[i].textContent = "";
-                times[i].textContent = "";
+    // Update stations_ja (常に実行して表示インデックスを埋める)
+    // ただし始発->終着が7駅以下の場合は右詰め表示して前方スロットを非表示にする
+    const startIdx = (window.userSettings && typeof window.userSettings.startIndex === 'number') ? window.userSettings.startIndex : currentIndex;
+    const smallCount = (endIdx - startIdx + 1) <= 7;
+    for (let i = 0; i < 8; i++) {
+        let index;
+        if (smallCount) {
+            // 右詰め: 前方の (8 - count) スロットは空にする
+            const count = endIdx - startIdx + 1;
+            if (i < 8 - count) {
+                // 見た目を保持するために完全に消さず、全角空白や透明ナンバリングを設定する
+                displayedIndices.push(NaN);
+                // 駅名は全角空白で埋める
+                jaStations[i].textContent = '\u3000';
+                enStations[i].textContent = '\u3000';
+                // ナンバリングは JK-00 にして透明化
+                numberings[i].textContent = 'JK-00';
+                numberings[i].style.color = 'transparent';
+                // 所要時間も全角空白にし、背景は不可視風にする
+                times[i].textContent = '\u3000';
+                times[i].style.backgroundColor = '#b1b1b1';
+                // クリアID/データ属性
                 jaStations[i].id = "";
                 numberings[i].id = "";
                 times[i].id = "";
@@ -551,48 +526,85 @@ function updateDisplay(NextOrPrevious) {
                 numberings[i].dataset.index = undefined;
                 times[i].dataset.index = undefined;
                 continue;
-            }
-            const [kanji, english, hi, number, three_letter, time] = stations[index];
-
-            // "さいたま新都心"の場合に"<br>"を挿入するなど
-            if (kanji === "さいたま新都心") {
-                jaStations[i].innerHTML = "さいたま<br>新都心";
-                jaStations[i].style.writingMode = "vertical-rl";
-                jaStations[i].style.margin = "0 4.7vw 0 -1.9vw";
-            } else if (kanji === "高輪ゲートウェイ") {
-                jaStations[i].innerHTML = '高　輪<div style="transform: scale(1,0.65) translateY(28%);">ゲートウェイ</div>';
-                jaStations[i].style.writingMode = "vertical-rl";
-                jaStations[i].style.margin = i !== 0 ? "0 4.7vw 0 -1.9vw" : "0 5.1vw 0 8.3vw";
-            } else if (kanji === "石川町") {
-                jaStations[i].innerHTML = '石川町<div style="font-size: 0.8em; transform: scale(1,0.7) translateY(28%);">（元町・中華街）</div>';
-                jaStations[i].style.writingMode = "vertical-rl";
-                jaStations[i].style.margin = i !== 0 ? "0 4.7vw 0 -1.9vw" : "0 5.1vw 0 8.3vw";
-            } else if (kanji === "蕨") {
-                jaStations[i].innerHTML = "蕨&emsp;";
             } else {
-                jaStations[i].textContent = kanji;
-                jaStations[i].style.writingMode = null;
-                jaStations[i].style.margin = null;
+                index = startIdx + (i - (8 - count));
+                // ensure visible
+                jaStations[i].style.display = '';
+                enStations[i].style.display = '';
+                numberings[i].style.display = '';
+                times[i].style.display = '';
+                // リセット（透明化されている可能性があるため）
+                numberings[i].style.color = '';
+                times[i].style.backgroundColor = '';
             }
-
-            enStations[i].textContent = english;
-            numberings[i].textContent = "JK-" + number;
-
-            jaStations[i].id = number;
-            // 各要素に実際のステーション配列インデックスをデータ属性で保存
-            jaStations[i].dataset.index = index;
-            numberings[i].dataset.index = index;
-            times[i].dataset.index = index;
-            numberings[i].id = (parseFloat(number) + 0.2).toString();
-            times[i].id = (parseFloat(number) + 0.5).toString();
+        } else {
+            index = displayBase - 1 + i; // 表示は displayBase の1つ前（現在地表示開始基準）を先頭にする
+            // ensure visible
+            jaStations[i].style.display = '';
+            enStations[i].style.display = '';
+            numberings[i].style.display = '';
+            times[i].style.display = '';
         }
-        over8 = 0;
+        displayedIndices.push(index);
+        if (index < 0 || index >= stations.length) {
+            // 範囲外ならセルをクリア
+            jaStations[i].textContent = "";
+            enStations[i].textContent = "";
+            numberings[i].textContent = "";
+            times[i].textContent = "";
+            jaStations[i].id = "";
+            numberings[i].id = "";
+            times[i].id = "";
+            jaStations[i].dataset.index = undefined;
+            numberings[i].dataset.index = undefined;
+            times[i].dataset.index = undefined;
+            continue;
+        }
+        const [kanji, english, hi, number, three_letter, time] = stations[index];
+
+        // "さいたま新都心"の場合に"<br>"を挿入するなど
+        if (kanji === "さいたま新都心") {
+            jaStations[i].innerHTML = "さいたま<br>新都心";
+            jaStations[i].style.writingMode = "vertical-rl";
+            jaStations[i].style.margin = "0 4.7vw 0 -1.9vw";
+        } else if (kanji === "高輪ゲートウェイ") {
+            jaStations[i].innerHTML = '高　輪<div style="transform: scale(1,0.65) translateY(28%);">ゲートウェイ</div>';
+            jaStations[i].style.writingMode = "vertical-rl";
+            jaStations[i].style.margin = i !== 0 ? "0 4.7vw 0 -1.9vw" : "0 5.1vw 0 8.3vw";
+        } else if (kanji === "石川町") {
+            jaStations[i].innerHTML = '石川町<div style="font-size: 0.8em; transform: scale(1,0.7) translateY(28%);">（元町・中華街）</div>';
+            jaStations[i].style.writingMode = "vertical-rl";
+            jaStations[i].style.margin = i !== 0 ? "0 4.7vw 0 -1.9vw" : "0 5.1vw 0 8.3vw";
+        } else if (kanji === "蕨") {
+            jaStations[i].innerHTML = "蕨&emsp;";
+        } else if (kanji === "東神奈川") {
+            jaStations[i].innerHTML = '<div style="transform: scale(1,0.9) translateY(6%);">東神奈川</div>';
+        } else if (kanji === "西日暮里") {
+            jaStations[i].innerHTML = '<div style="transform: scale(1,0.9) translateY(6%);">西日暮里</div>';
+        } else {
+            jaStations[i].textContent = kanji;
+            jaStations[i].style.writingMode = null;
+            jaStations[i].style.margin = null;
+        }
+
+        enStations[i].textContent = english;
+        numberings[i].textContent = "JK-" + number;
+
+        jaStations[i].id = number;
+        // 各要素に実際のステーション配列インデックスをデータ属性で保存
+        jaStations[i].dataset.index = index;
+        numberings[i].dataset.index = index;
+        times[i].dataset.index = index;
+        numberings[i].id = (parseFloat(number) + 0.2).toString();
+        times[i].id = (parseFloat(number) + 0.5).toString();
+    }
+    over8 = 0;
 
     // 時刻表示は以下でavailable/unavailableクラスを割り当てた後に再取得して更新する
 
 
     // すべての<p>要素を取得
-    const ALLpElements = document.querySelectorAll("#sita p");
+    const ALLpElements = document.querySelectorAll("#stations p");
     ALLpElements.forEach((p) => {
         const dataIndex = p.dataset.index;
         const stationIndex = dataIndex !== undefined ? parseInt(dataIndex, 10) : NaN;
@@ -711,12 +723,44 @@ function updateDisplay(NextOrPrevious) {
     }
 
     currentIndex = nextIndex;
+
+    // 位置マーカーを適切な場所に配置する
+    try {
+        if (window.placePositionMarker) {
+            if (typeof departureMode !== 'undefined' && departureMode) {
+                // departure モードでは現在位置のスロット上に配置（見つからなければ先頭）
+                let curSlot = displayedIndices.findIndex(idx => idx === currentIndex);
+                if (curSlot === -1) curSlot = 0;
+                window.placePositionMarker(curSlot, 'right');
+            } else {
+                // 通常モード（"次は○○"）では、次駅のスロットと一つ前のスロットの間に配置する
+                const nextSlot = displayedIndices.findIndex(idx => idx === nextIndex);
+                if (nextSlot <= 0) {
+                    window.placePositionMarker(0, 'right');
+                } else {
+                    window.placePositionMarker(nextSlot - 0.5, 'right');
+                }
+            }
+        }
+    } catch (e) {
+        // ignore
+    }
 };
 
 // デフォルトは departure モードで開始
 document.addEventListener("DOMContentLoaded", () => {
     setupSettingsPanel();
     enterDepartureMode();
+    // 初期マーカーを作成（幅は所要時間<p>の幅に合わせる）
+    try {
+        createPositionMarker({
+            widthSourceSelector: '.after_next_station_time',
+            slotIndex: 0, // デフォルトで最初のスロット上に配置
+            direction: 'right'
+        });
+    } catch (e) {
+        console.warn('position marker init failed', e);
+    }
 });
 
 // 進退: クリックは departureMode 中は無視
@@ -736,3 +780,203 @@ document.addEventListener("keydown", (event) => {
         }
     }
 });
+
+/* ====== 位置表示マーカー (SVG 台形) の生成・配置 ======
+   - widthSourceSelector で参照する <p> 要素の幅をマーカー幅にする
+   - slotIndex は 0..7 のスロット番号（#stick 内の p 要素の順序）
+   - direction は 'right'（デフォルト）か 'left'
+   利用例: createPositionMarker({ widthSourceSelector: '.after_next_station_time', slotIndex: 2, direction: 'right' })
+*/
+function createPositionMarker(opts = {}) {
+    const stick = document.getElementById('stick');
+    if (!stick) return;
+
+    const widthSourceSelector = opts.widthSourceSelector || '.after_next_station_time';
+    const slotIndex = (typeof opts.slotIndex === 'number') ? opts.slotIndex : 0;
+    const direction = opts.direction || 'right';
+
+    // コンテナを用意（既存なら再利用）
+    let container = document.getElementById('position-marker-container');
+    if (!container) {
+        container = document.createElement('div');
+        container.id = 'position-marker-container';
+        stick.appendChild(container);
+    }
+    container.innerHTML = '';
+
+    // 幅を取得（最初の該当要素）
+    const source = document.querySelector(widthSourceSelector);
+    const sourceWidth = source ? source.getBoundingClientRect().width : null;
+
+    // stick の高さ（ピクセル）
+    const stickRect = stick.getBoundingClientRect();
+    const h = Math.max(1, Math.round(stickRect.height));
+
+    // デフォルト幅: sourceWidth が無ければピクセル換算で 5.5vw 相当を使う
+    const srcW = sourceWidth || Math.round((5.5 / 100) * Math.max(document.documentElement.clientWidth, 1000));
+
+    // 長方形部分を所要幅より少し狭める（p 要素の間に収まるようにする）
+    const bodyRatio = 0.78; // 調整可能（0.0-1.0）
+    const bodyW = Math.max(4, Math.round(srcW * bodyRatio));
+    // 三角のはみ出し量は元の幅比率を保つ（見た目の三角部は維持）
+    const tipExtra = Math.max(2, Math.round(srcW * 0.12));
+
+    // SVG を生成（bodyW を基準に作る）
+    const svg = buildTrapezoidSVG(bodyW, h, tipExtra);
+
+    const wrapper = document.createElement('div');
+    wrapper.className = 'position-marker' + (direction === 'left' ? ' left' : '');
+    const wrapperWidth = bodyW + tipExtra;
+    wrapper.style.width = wrapperWidth + 'px';
+    wrapper.style.height = h + 'px';
+    wrapper.appendChild(svg);
+    container.appendChild(wrapper);
+
+    // 指定されたスロット上に水平位置を合わせる（中央揃え）
+    const times = stick.querySelectorAll('p');
+    if (times && times.length > slotIndex) {
+        const target = times[slotIndex];
+        const tRect = target.getBoundingClientRect();
+        const stickRect2 = stick.getBoundingClientRect();
+        // left は target の左端を基準に、中央に合わせる
+        const leftPx = (tRect.left - stickRect2.left) + (tRect.width - wrapperWidth) / 2;
+        wrapper.style.left = Math.max(0, Math.round(leftPx)) + 'px';
+    } else {
+        // デフォルトは左端に少しマージン
+        wrapper.style.left = '5%';
+    }
+
+    // リサイズ時に幅・位置を更新
+    const resizeObserver = new ResizeObserver(() => {
+        try { updatePositionMarker(wrapper, widthSourceSelector, slotIndex); } catch (e) { }
+    });
+    resizeObserver.observe(document.documentElement);
+
+    // グローバル関数で操作できるように公開
+    window.placePositionMarker = function (slot, dir) {
+        updatePositionMarker(wrapper, widthSourceSelector, slot, dir);
+    };
+}
+
+function updatePositionMarker(wrapper, widthSourceSelector, slotIndex = 0, direction) {
+    const stick = document.getElementById('stick');
+    if (!stick || !wrapper) return;
+    const source = document.querySelector(widthSourceSelector);
+    const sourceWidth = source ? source.getBoundingClientRect().width : wrapper.clientWidth;
+    const h = Math.max(1, Math.round(stick.getBoundingClientRect().height));
+    const w = Math.max(4, Math.round(sourceWidth));
+
+    // SVG を差し替え
+    wrapper.style.width = w + 'px';
+    wrapper.style.height = h + 'px';
+    wrapper.innerHTML = '';
+    wrapper.appendChild(buildTrapezoidSVG(w, h));
+    if (direction) {
+        if (direction === 'left') wrapper.classList.add('left');
+        else wrapper.classList.remove('left');
+    }
+
+    const times = stick.querySelectorAll('p');
+    if (times && times.length) {
+        const stickRect = stick.getBoundingClientRect();
+        // slotIndex が整数であればそのスロットの中央に合わせる。
+        // 小数（例: 2.5）の場合はその前後スロットの中央の中間位置に置く。
+        if (Number.isFinite(slotIndex) && !Number.isNaN(slotIndex)) {
+            if (Number.isInteger(slotIndex)) {
+                const idx = slotIndex;
+                const safeIdx = Math.max(0, Math.min(times.length - 1, idx));
+                const target = times[safeIdx];
+                const tRect = target.getBoundingClientRect();
+                const leftPx = (tRect.left - stickRect.left) + (tRect.width - w) / 2;
+                wrapper.style.left = Math.max(0, Math.round(leftPx)) + 'px';
+            } else {
+                // fractional index handling
+                const lo = Math.floor(slotIndex);
+                const hi = Math.ceil(slotIndex);
+                const safeLo = Math.max(0, Math.min(times.length - 1, lo));
+                const safeHi = Math.max(0, Math.min(times.length - 1, hi));
+                const tLo = times[safeLo].getBoundingClientRect();
+                const tHi = times[safeHi].getBoundingClientRect();
+                const centerLo = tLo.left + tLo.width / 2;
+                const centerHi = tHi.left + tHi.width / 2;
+                const centerAvg = (centerLo + centerHi) / 2;
+                const leftPx = (centerAvg - stickRect.left) - (w / 2);
+                wrapper.style.left = Math.max(0, Math.round(leftPx)) + 'px';
+            }
+        }
+    }
+}
+
+function buildTrapezoidSVG(widthPx, heightPx, tipExtraParam) {
+    const w = Math.max(4, Math.round(widthPx));
+    const h = Math.max(2, Math.round(heightPx));
+
+    // outerInset: 長方形部分の幅を決める（小さめにして黒縁を細く見せる）
+    const outerInset = Math.max(6, Math.round(w * 0.12));
+    // tipExtra: 先端のはみ出し量（見た目の尖り）
+    const tipExtra = (typeof tipExtraParam === 'number' && tipExtraParam > 0) ? Math.round(tipExtraParam) : Math.max(2, Math.round(w * 0.12));
+
+    const xmlns = 'http://www.w3.org/2000/svg';
+    const svg = document.createElementNS(xmlns, 'svg');
+    svg.setAttribute('width', String(w + tipExtra));
+    svg.setAttribute('height', String(h));
+    svg.setAttribute('viewBox', `0 0 ${w + tipExtra} ${h}`);
+
+    const outerRectX = w - outerInset;
+    const outerTipX = w + tipExtra;
+
+    // 外側（黒）
+    const outer = document.createElementNS(xmlns, 'polygon');
+    outer.setAttribute('points', `${0},${0} ${outerRectX},${0} ${outerTipX},${h / 2} ${outerRectX},${h} ${0},${h}`);
+    outer.setAttribute('fill', '#000');
+    // 黒縁をほんの少し太くする（塗りの上にストロークを追加）
+    const blackStroke = Math.max(2, Math.round(w * 0.002));
+    outer.setAttribute('stroke', '#000');
+    outer.setAttribute('stroke-width', String(blackStroke));
+    outer.setAttribute('stroke-linejoin', 'miter');
+    svg.appendChild(outer);
+
+    // 中間（白）: 外側から一定量内側にオフセットして描画（白縁）
+    const whiteBorder = Math.max(2, Math.round(w * 0.010)); // 白縁の太さ（px目安）
+    const mInset = whiteBorder;
+    const mRectX = outerRectX - mInset;
+    const mTipX = outerTipX - mInset;
+    const mx = mInset;
+    const my = mInset;
+    const mw = (w) - mInset * 2;
+    const mh = h - mInset * 2;
+    const middle = document.createElementNS(xmlns, 'polygon');
+    middle.setAttribute('points', `${mx},${my} ${mRectX},${my} ${mTipX},${h / 2} ${mRectX},${my + mh} ${mx},${my + mh}`);
+    middle.setAttribute('fill', '#fff');
+    svg.appendChild(middle);
+
+    // 内側（色）: 白縁の内側にさらに少し内側を作る
+    const innerBorder = Math.max(1, Math.round(w * 0.02));
+    const iInset = mInset + innerBorder;
+    const iRectX = outerRectX - iInset;
+    const iTipX = outerTipX - iInset;
+    const ix = iInset;
+    const iy = iInset;
+    const iw = w - iInset * 2;
+    const ih = h - iInset * 2;
+
+    // グラデーション定義
+    const defs = document.createElementNS(xmlns, 'defs');
+    const grad = document.createElementNS(xmlns, 'linearGradient');
+    grad.setAttribute('id', 'markerGrad' + Math.random().toString(36).slice(2, 8));
+    grad.setAttribute('x1', '0'); grad.setAttribute('y1', '0'); grad.setAttribute('x2', '0'); grad.setAttribute('y2', '1');
+    const stop1 = document.createElementNS(xmlns, 'stop'); stop1.setAttribute('offset', '0%'); stop1.setAttribute('stop-color', '#39c339');
+    const stop2 = document.createElementNS(xmlns, 'stop'); stop2.setAttribute('offset', '50%'); stop2.setAttribute('stop-color', '#39c339');
+    const stop3 = document.createElementNS(xmlns, 'stop'); stop3.setAttribute('offset', '50%'); stop3.setAttribute('stop-color', '#009838');
+    const stop4 = document.createElementNS(xmlns, 'stop'); stop4.setAttribute('offset', '100%'); stop4.setAttribute('stop-color', '#009838');
+    grad.appendChild(stop1); grad.appendChild(stop2); grad.appendChild(stop3); grad.appendChild(stop4);
+    defs.appendChild(grad);
+    svg.appendChild(defs);
+
+    const inner = document.createElementNS(xmlns, 'polygon');
+    inner.setAttribute('points', `${ix},${iy} ${iRectX},${iy} ${iTipX},${h / 2} ${iRectX},${iy + ih} ${ix},${iy + ih}`);
+    inner.setAttribute('fill', `url(#${grad.getAttribute('id')})`);
+    svg.appendChild(inner);
+
+    return svg;
+}

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=2000">
+    <meta name="viewport" content="width=1000">
     <title>LCD</title>
     <link rel="stylesheet" href="LCD.css">
 </head>
@@ -14,15 +14,15 @@
         <div id="ue">
             <div id="syubetu">
                 <div class="ue_ja">
-                    <p class="syubetu-ura"  >各駅<br>停車</p>
+                    <p class="syubetu-ura">各駅<br>停車</p>
                     <p class="syubetu-omote">各駅<br>停車</p>
                 </div>
                 <div class="ue_en" id="syubetu-en">
-                    <p class="syubetu-ura"  >Local</p>
+                    <p class="syubetu-ura">Local</p>
                     <p class="syubetu-omote">Local</p>
                 </div>
                 <div class="ue_hi">
-                    <p class="syubetu-ura"  >各駅<br>停車</p>
+                    <p class="syubetu-ura">各駅<br>停車</p>
                     <p class="syubetu-omote">各駅<br>停車</p>
                 </div>
             </div>
@@ -76,46 +76,110 @@
             </div>
         </div>
         <div id="sita">
-            <div id="eight_stations">
-                <div id="stick">
-                    <p class="first_station_time"></p>
-                    <p class="after_next_station_time"></p>
-                    <p class="after_next_station_time"></p>
-                    <p class="after_next_station_time"></p>
-                    <p class="after_next_station_time"></p>
-                    <p class="after_next_station_time"></p>
-                    <p class="after_next_station_time"></p>
-                    <p class="after_next_station_time"></p>
+            <div id="stations">
+                <div id="eight_stations">
+                    <div id="stick">
+                        <p class="first_station_time"></p>
+                        <p class="after_next_station_time"></p>
+                        <p class="after_next_station_time"></p>
+                        <p class="after_next_station_time"></p>
+                        <p class="after_next_station_time"></p>
+                        <p class="after_next_station_time"></p>
+                        <p class="after_next_station_time"></p>
+                        <p class="after_next_station_time"></p>
+                    </div>
+                    <div id="stations_ja">
+                        <p class="first_station">大　船</p>
+                        <p class="after_next_station">本郷台</p>
+                        <p class="after_next_station">港南台</p>
+                        <p class="after_next_station">洋光台</p>
+                        <p class="after_next_station">新杉田</p>
+                        <p class="after_next_station">磯　子</p>
+                        <p class="after_next_station">根　岸</p>
+                        <p class="after_next_station">山　手</p>
+                    </div>
+                    <div id="stations_en">
+                        <p id="first_station_en">Ōfuna</p>
+                        <p id="second_station_en">Hongōdai</p>
+                        <p id="third_station_en">Kōnandai</p>
+                        <p id="fourth_station_en">Yōkōdai</p>
+                        <p id="fifth_station_en">Shin-<br>　Sugita</p>
+                        <p id="sixth_station_en">Isogo</p>
+                        <p id="seventh_station_en">Negishi</p>
+                        <p id="eighth_station_en">Yamate</p>
+                    </div>
+                    <div id="numberings">
+                        <p class="first_numbering">JK-01</p>
+                        <p class="after_numbering">JK-02</p>
+                        <p class="after_numbering">JK-03</p>
+                        <p class="after_numbering">JK-04</p>
+                        <p class="after_numbering">JK-05</p>
+                        <p class="after_numbering">JK-06</p>
+                        <p class="after_numbering">JK-07</p>
+                        <p class="after_numbering">JK-08</p>
+                    </div>
                 </div>
-                <div id="stations_ja">
-                    <p class="first_station">大　船</p>
-                    <p class="after_next_station">本郷台</p>
-                    <p class="after_next_station">港南台</p>
-                    <p class="after_next_station">洋光台</p>
-                    <p class="after_next_station">新杉田</p>
-                    <p class="after_next_station">磯　子</p>
-                    <p class="after_next_station">根　岸</p>
-                    <p class="after_next_station">山　手</p>
+            </div>
+            <div id="transfer">
+                <div>
+                    <p><span class="line-code-JR">JT</span>上野東京ライン</p>
+                    <p><span class="line-code-JR">JT</span>東海道線</p>
+                    <p><span class="line-code-JR">JO</span>横須賀線</p>
+                    <p><span class="line-code-JR">JS</span>湘南新宿ライン</p>
+                    <p>京急線</p>
+                    <p>東急東横線</p>
+                    <p>相鉄線</p>
+                    <p>みなとみらい線</p>
+                    <p>横浜市営地下鉄<br>ブルーライン</p>
                 </div>
-                <div id="stations_en">
-                    <p id="first_station_en">Ōfuna</p>
-                    <p id="second_station_en">Hongōdai</p>
-                    <p id="third_station_en">Kōnandai</p>
-                    <p id="fourth_station_en">Yōkōdai</p>
-                    <p id="fifth_station_en">Shin-<br>　Sugita</p>
-                    <p id="sixth_station_en">Isogo</p>
-                    <p id="seventh_station_en">Negishi</p>
-                    <p id="eighth_station_en">Yamate</p>
+                <div>
+                    <p>上野東京ライン</p>
+                    <p>東海道線</p>
+                    <p>横須賀線</p>
+                    <p>湘南新宿ライン</p>
+                    <p>京急線</p>
                 </div>
-                <div id="numberings">
-                    <p class="first_numbering">JK-01</p>
-                    <p class="after_numbering">JK-02</p>
-                    <p class="after_numbering">JK-03</p>
-                    <p class="after_numbering">JK-04</p>
-                    <p class="after_numbering">JK-05</p>
-                    <p class="after_numbering">JK-06</p>
-                    <p class="after_numbering">JK-07</p>
-                    <p class="after_numbering">JK-08</p>
+                <div>
+                    <p>上野東京ライン</p>
+                    <p>東海道線</p>
+                    <p>横須賀線</p>
+                    <p>湘南新宿ライン</p>
+                    <p>京急線</p>
+                </div>
+                <div>
+                    <p>上野東京ライン</p>
+                    <p>東海道線</p>
+                    <p>横須賀線</p>
+                    <p>湘南新宿ライン</p>
+                    <p>京急線</p>
+                </div>
+                <div>
+                    <p>上野東京ライン</p>
+                    <p>東海道線</p>
+                    <p>横須賀線</p>
+                    <p>湘南新宿ライン</p>
+                    <p>京急線</p>
+                </div>
+                <div>
+                    <p>上野東京ライン</p>
+                    <p>東海道線</p>
+                    <p>横須賀線</p>
+                    <p>湘南新宿ライン</p>
+                    <p>京急線</p>
+                </div>
+                <div>
+                    <p>上野東京ライン</p>
+                    <p>東海道線</p>
+                    <p>横須賀線</p>
+                    <p>湘南新宿ライン</p>
+                    <p>京急線</p>
+                </div>
+                <div>
+                    <p>上野東京ライン</p>
+                    <p>東海道線</p>
+                    <p>横須賀線</p>
+                    <p>湘南新宿ライン</p>
+                    <p>京急線</p>
                 </div>
             </div>
         </div>
