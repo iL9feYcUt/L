@@ -393,78 +393,26 @@ p {
     text-align: end;
     line-height: 100%;
     bottom: 23vw;
-}
-
-#stations_en {
-    position: relative;
-    display: inline;
-    font-family: 'Helvetica';
-    font-size: 3.8vw;
-    line-height: 100%;
-    text-align: left;
-    white-space: nowrap;
     display: none;
 }
 
+#stations_en {
+    position: absolute;
+    display: flex;
+    font-family: 'Helvetica';
+    font-size: 3.8vw;
+    line-height: 100%;
+    left: 10.2vw;
+    top: 56%;
+    gap: 9.9vw;
+}
+
 #stations_en p {
-    transform-origin: bottom left; /* 左下を固定して回転 */
-}
-
-#first_station_en {
-    position: absolute;
     transform: rotate(-70deg);
-    top: 8vw;
-    left: 14vw;
-    color: #a4a4a4;
-}
-
-#second_station_en {
-    position: absolute;
-    transform: rotate(-70deg);
-    top: 7.9vw;
-    left: 25vw;
-}
-
-#third_station_en {
-    position: absolute;
-    transform: rotate(-70deg);
-    top: 7.85vw;
-    left: 35.5vw;
-}
-
-#fourth_station_en {
-    position: absolute;
-    transform: rotate(-70deg);
-    top: 8.5vw;
-    left: 46.5vw;
-}
-
-#fifth_station_en {
-    position: absolute;
-    transform: rotate(-70deg);
-    top: 8vw;
-    left: 57vw;
-}
-
-#sixth_station_en {
-    position: absolute;
-    transform: rotate(-70deg);
-    top: 7.8vw;
-    left: 68vw;
-}
-
-#seventh_station_en {
-    position: absolute;
-    transform: rotate(-70deg);
-    top: 7.8vw;
-    left: 78.5vw;
-}
-
-#eighth_station_en {
-    position: absolute;
-    transform: rotate(-70deg);
-    top: 8.5vw;
-    left: 89vw;
+    width: 1vw;
+    height: 1vw;
+    vertical-align: middle;
+    align-items: center;
 }
 
 .first_station {
