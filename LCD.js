@@ -635,17 +635,62 @@ function updateDisplay(NextOrPrevious) {
                 if (Number.isFinite(idx) && idx >= 0 && idx < stations.length) {
                     const transferArr = stations[idx][6] || [];
                     // 空配列なら何も挿入しない（列は空のまま）
+                    // 路線コードマップ（UI 表示に使うアイコン）
+                    const lineCodeMap = {
+                        "京浜東北線": ["JK"],
+                        "横浜線": ["JH"],
+                        "上野東京ライン": ["JT", "JU"],
+                        "東海道線": ["JT"],
+                        "横須賀線": ["JO"],
+                        "湘南新宿ライン": ["JS"],
+                        "鶴見線": ["JI"],
+                        "南武線": ["JN"],
+                        "山手線": ["JY"],
+                        "総武線快速": ["JO"],
+                        "京葉線": ["JE"],
+                        "中央線": ["JC"],
+                        "総武線(各駅停車)": ["JB"],
+                        "常磐線": ["JJ"],
+                        "宇都宮線": ["JU"],
+                        "高崎線": ["JU"],
+                        "埼京線": ["JA"],
+                        "武蔵野線": ["JM"]
+                    };
+
                     transferArr.forEach((line) => {
                         const p = document.createElement('p');
+                        // 表示テキスト（既存の特殊ケースは維持）
+                        let displayText = line;
                         if (line === "ブルーライン") {
-                            p.innerHTML = '横浜市営地下鉄<br>(ブルーライン)';
+                            displayText = '横浜市営地下鉄<br>(ブルーライン)';
                         } else if (line === '山手線（渋谷・新宿方面）') {
-                            p.innerHTML = '山手線<br>(渋谷・新宿方面)';
+                            displayText = '山手線<br>(渋谷・新宿方面)';
                         } else if (line === '東京モノレール') {
-                            p.innerHTML = '東京モノレール<br>羽田空港線';
-                        } else {
-                            p.textContent = line;
+                            displayText = '東京モノレール<br>羽田空港線';
                         }
+
+                        // まずテキストを設定
+                        if (displayText.indexOf('<br') >= 0) {
+                            p.innerHTML = displayText;
+                        } else {
+                            p.textContent = displayText;
+                        }
+
+                        // アイコンがある路線なら先頭に img を挿入（複数コード対応）
+                        const codes = lineCodeMap[line];
+                        if (Array.isArray(codes)) {
+                            codes.forEach((code) => {
+                                const img = document.createElement('img');
+                                img.src = 'images/line_code/' + code + '.png';
+                                img.alt = code;
+                                img.style.height = '1.2em';
+                                img.style.width = 'auto';
+                                img.style.marginRight = '0.2em';
+                                img.style.verticalAlign = 'middle';
+                                p.insertBefore(img, p.firstChild);
+                            });
+                        }
+
                         col.appendChild(p);
                     });
                 }

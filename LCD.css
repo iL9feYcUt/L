@@ -393,12 +393,11 @@ p {
     text-align: end;
     line-height: 100%;
     bottom: 23vw;
-    display: none;
 }
 
 #stations_en {
     position: absolute;
-    display: flex;
+    display: none;
     font-family: 'Helvetica';
     font-size: 3.8vw;
     line-height: 100%;
@@ -499,19 +498,4 @@ select {
 
 #transfer div {
     width: 10.8vw;
-}
-
-.line-code-JR {
-    font-family: 'Frutiger-B';
-    line-height: 100%;
-    display: inline-block;
-    font-size: 0.9vw;
-    background-color: #fff;
-    border-radius: 0.15vw;
-    padding: 0.6% 1.0%;
-    margin-right: 1%;
-    border: 0.17vw solid #ffa200;
-    aspect-ratio: 1/1;
-    width: 0.9vw;
-    text-align: center;
 }
