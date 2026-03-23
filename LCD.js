@@ -591,7 +591,26 @@ function updateDisplay(NextOrPrevious) {
             jaStations[i].style.margin = null;
         }
 
-        enStations[i].textContent = english;
+        if (english === "Shin-Sugita") {
+            enStations[i].innerHTML = '<div style="transform: translate(-1vw, -30%);">Shin-<br><span style="margin-left: 1.5em;">Sugita</span></div>';
+        } else if (english === "Ishikawachō") {
+            enStations[i].innerHTML = '<div style="transform: scale(0.75,1) translate(2%,2%);">Ishikawachō</div>';
+        } else if (english === "Sakuragichō") {
+            enStations[i].innerHTML = '<div style="transform: scale(0.77,1) translate(-0.4vw,-0.7vw);">Sakuragichō</div>';
+        } else if (english === "Yokohama") {
+            enStations[i].innerHTML = '<div style="transform: scale(0.95,1) translate(-0.7vw,-0.5vw);">Yokohama</div>';
+        } else if (english === "Higashi-Kanagawa") {
+            enStations[i].innerHTML = '<div style="transform: scale(0.9,1) translate(-1vw, -30%);">Higashi-<br><span style="margin-left: 0.5em;">Kanagawa</span></div>';
+        } else if (english === "Shin-Koyasu") {
+            enStations[i].innerHTML = '<div style="transform: translate(-1vw, -30%);">Shin-<br><span style="margin-left: 1em;">Koyasu</span></div>';
+        } else {
+            enStations[i].textContent = english;
+        }
+
+        // 英語表示側にも駅インデックスと id を設定して、
+        // available/unavailable の判定対象にする
+        enStations[i].dataset.index = index;
+        enStations[i].id = number;
         numberings[i].textContent = "JK-" + number;
 
         jaStations[i].id = number;
