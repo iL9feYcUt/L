@@ -889,9 +889,25 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-// 進退: クリックは departureMode 中は無視
-document.addEventListener("click", (e) => {
-    if (!departureMode) updateDisplay(e);
+// 進退: クリックは `#sita` のみで反応（departureMode 時もキーボードと同等）
+document.addEventListener("DOMContentLoaded", () => {
+    const gj = document.getElementById('car-number');
+    if (!gj) return;
+    gj.addEventListener('click', (e) => {
+        // ArrowRight キーと同じ挙動を実行
+        if (departureMode) {
+            try { exitDepartureMode(); } catch (err) { /* ignore */ }
+            updateDisplay(1);
+            textSize();
+            syubetuColor();
+        } else {
+            updateDisplay(1);
+            textSize();
+        }
+        // クリックが他のハンドラに伝播しないようにする
+        e.stopPropagation();
+        e.preventDefault();
+    });
 });
 document.addEventListener("keydown", (event) => {
     if (event.key === "ArrowRight") {
