@@ -399,10 +399,10 @@ p {
     position: absolute;
     display: none;
     font-family: 'Helvetica';
-    font-size: 3.8vw;
+    font-size: 3.6vw;
     line-height: 100%;
     left: 10.2vw;
-    top: 56%;
+    top: 30.5vw;
     gap: 9.9vw;
 }
 
@@ -498,4 +498,8 @@ select {
 
 #transfer div {
     width: 10.8vw;
+}
+
+#transfer p p {
+    margin-bottom: 0.1vw;
 }
