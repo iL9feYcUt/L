@@ -315,7 +315,7 @@ p {
 #stick {
     display: flex;
     position: relative;
-    top: 18vw;
+    top: 16.8vw;
     width: 97%;
     height: 5vw;
     background-color: #00bae8;
@@ -392,7 +392,7 @@ p {
     writing-mode: vertical-lr;
     text-align: end;
     line-height: 100%;
-    bottom: 23vw;
+    bottom: 24vw;
 }
 
 #stations_en {
@@ -425,7 +425,7 @@ p {
 
 #numberings {
     position: absolute;
-    top: 33.1vw;
+    top: 32vw;
     display: flex;
     font-size: 2vw;
     line-height: 100%;
@@ -491,11 +491,11 @@ select {
     position: absolute;
     display: flex;
     left: 7.3%;
-    top: 40.2vw;
-    line-height: 110%;
+    top: 39vw;
+    line-height: 100%;
     font-size: 1.2vw;
 }
 
 #transfer div {
-    width: 10.9vw;
+    width: 10.8vw;
 }

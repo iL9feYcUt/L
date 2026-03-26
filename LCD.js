@@ -568,15 +568,15 @@ function updateDisplay(NextOrPrevious) {
 
         // "さいたま新都心"の場合に"<br>"を挿入するなど
         if (kanji === "さいたま新都心") {
-            jaStations[i].innerHTML = "さいたま<br>新都心";
+            jaStations[i].innerHTML = '<div style="transform: scale(1,0.95) translateY(4%);">さいたま</div>新都心';
             jaStations[i].style.writingMode = "vertical-rl";
-            jaStations[i].style.margin = "0 4.7vw 0 -1.9vw";
+            jaStations[i].style.margin = i !== 0 ? "0 4.7vw 0 -1.9vw" : "0 5.1vw 0 8.3vw";
         } else if (kanji === "高輪ゲートウェイ") {
-            jaStations[i].innerHTML = '高　輪<div style="transform: scale(1,0.65) translateY(28%);">ゲートウェイ</div>';
+            jaStations[i].innerHTML = '高　輪<div style="transform: scale(1,0.6) translateY(31%);">ゲートウェイ</div>';
             jaStations[i].style.writingMode = "vertical-rl";
             jaStations[i].style.margin = i !== 0 ? "0 4.7vw 0 -1.9vw" : "0 5.1vw 0 8.3vw";
         } else if (kanji === "石川町") {
-            jaStations[i].innerHTML = '石川町<div style="font-size: 0.8em; transform: scale(1,0.7) translateY(28%);">（元町・中華街）</div>';
+            jaStations[i].innerHTML = '石川町<div style="font-size: 0.8em; transform: scale(1,0.65) translateY(32%);">（元町・中華街）</div>';
             jaStations[i].style.writingMode = "vertical-rl";
             jaStations[i].style.margin = i !== 0 ? "0 4.7vw 0 -1.9vw" : "0 5.1vw 0 8.3vw";
         } else if (kanji === "蕨") {
@@ -669,6 +669,8 @@ function updateDisplay(NextOrPrevious) {
 
                     transferArr.forEach((line) => {
                         const p = document.createElement('p');
+                        // アイコンと路線名を同一行に表示するため折返しを無効化
+                        p.style.whiteSpace = 'nowrap';
                         // 表示テキスト（既存の特殊ケースは維持）
                         let displayText = line;
                         if (line === "ブルーライン") {
@@ -679,10 +681,14 @@ function updateDisplay(NextOrPrevious) {
                             displayText = '山手線<br>　（巣鴨・池袋方面）';
                         } else if (line === '東京モノレール') {
                             displayText = '東京モノレール<br>　羽田空港線';
+                        } else if (line === '上野東京ライン') {
+                            displayText = '<span style="display:inline-block; transform: scale(0.9,1); transform-origin:left center;">上野東京ライン</span>';
+                        } else if (line === 'シーサイドライン') {
+                            displayText = '<span style="display:inline-block; transform: scale(0.9,1); transform-origin:left center;">シーサイドライン</span>';
                         }
 
-                        // まずテキストを設定
-                        if (displayText.indexOf('<br') >= 0) {
+                        // まずテキストを設定（HTML タグを含む場合は innerHTML を使う）
+                        if (displayText.indexOf('<') >= 0) {
                             p.innerHTML = displayText;
                         } else {
                             p.textContent = displayText;
