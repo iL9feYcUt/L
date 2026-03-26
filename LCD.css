@@ -490,12 +490,12 @@ select {
     font-family: 'ShinGoPro-M';
     position: absolute;
     display: flex;
-    left: 8%;
-    top: 72%;
-    line-height: 120%;
-    font-size: 1.1vw;
+    left: 7.3%;
+    top: 40.2vw;
+    line-height: 110%;
+    font-size: 1.2vw;
 }
 
 #transfer div {
-    width: 10.8vw;
+    width: 10.9vw;
 }

@@ -1,5 +1,5 @@
 const stations = [
-    ["大　船", "Ōfuna", "おおふな", "01", "OFN", "0", ["東海道線", "横須賀線", "上野東京ライン","湘南新宿ライン", "湘南モノレール"]],
+    ["大　船", "Ōfuna", "おおふな", "01", "OFN", "0", ["東海道線", "横須賀線", "上野東京ライン", "湘南新宿ライン", "湘南モノレール"]],
     ["本郷台", "Hongōdai", "ほんごうだい", "02", "", "4", []],
     ["港南台", "Kōnandai", "こうなんだい", "03", "", "3", []],
     ["洋光台", "Yōkōdai", "ようこうだい", "04", "", "3", []],
@@ -24,7 +24,7 @@ const stations = [
     ["浜松町", "Hamamatsuchō", "はままつちょう", "23", "HMC", "3", ["東京モノレール", "都営大江戸線"]],
     ["新　橋", "Shimbashi", "しんばし", "24", "SMB", "2", ["銀座線", "都営浅草線", "ゆりかもめ"]],
     ["有楽町", "Yūrakuchō", "ゆうらくちょう", "25", "", "2", ["日比谷線", "有楽町線"]],
-    ["東　京", "Tōkyō", "とうきょう", "26", "TYO", "2", [ "東北・上越・北陸新幹線", "東海道・山陽新幹線", "中央線", "上野東京ライン", "横須賀線", "総武線快速", "京葉線", "丸ノ内線"]],
+    ["東　京", "Tōkyō", "とうきょう", "26", "TYO", "2", ["東北・上越・北陸新幹線", "東海道・山陽新幹線", "中央線", "上野東京ライン", "横須賀線", "総武線快速", "京葉線", "丸ノ内線"]],
     ["神　田", "Kanda", "かんだ", "27", "KND", "2", ["中央線", "銀座線"]],
     ["秋葉原", "Akihabara", "あきはばら", "28", "AKB", "2", ["総武線(各駅停車)", "つくばエクスプレス線", "日比谷線"]],
     ["御徒町", "Okachimachi", "おかちまち", "29", "", "2", ["都営大江戸線"]],
@@ -645,7 +645,8 @@ function updateDisplay(NextOrPrevious) {
                         "湘南新宿ライン": ["JS"],
                         "鶴見線": ["JI"],
                         "南武線": ["JN"],
-                        "山手線": ["JY"],
+                        "山手線（渋谷・新宿方面）": ["JY"],
+                        "山手線（巣鴨・池袋方面）": ["JY"],
                         "総武線快速": ["JO"],
                         "京葉線": ["JE"],
                         "中央線": ["JC"],
@@ -654,7 +655,16 @@ function updateDisplay(NextOrPrevious) {
                         "宇都宮線(東北線)": ["JU"],
                         "高崎線": ["JU"],
                         "埼京線": ["JA"],
-                        "武蔵野線": ["JM"]
+                        "武蔵野線": ["JM"],
+                        "りんかい線": ["R"],
+                        "銀座線": ["G"],
+                        "丸ノ内線": ["M"],
+                        "日比谷線": ["H"],
+                        "千代田線": ["C"],
+                        "有楽町線": ["Y"],
+                        "南北線": ["N"],
+                        "都営大江戸線": ["E"],
+                        "都営浅草線": ["A"],
                     };
 
                     transferArr.forEach((line) => {
@@ -662,11 +672,13 @@ function updateDisplay(NextOrPrevious) {
                         // 表示テキスト（既存の特殊ケースは維持）
                         let displayText = line;
                         if (line === "ブルーライン") {
-                            displayText = '横浜市営地下鉄<br>(ブルーライン)';
+                            displayText = '横浜市営地下鉄<br>　(ブルーライン)';
                         } else if (line === '山手線（渋谷・新宿方面）') {
-                            displayText = '山手線<br>(渋谷・新宿方面)';
+                            displayText = '山手線<br>　（渋谷・新宿方面）';
+                        } else if (line === '山手線（巣鴨・池袋方面）') {
+                            displayText = '山手線<br>　（巣鴨・池袋方面）';
                         } else if (line === '東京モノレール') {
-                            displayText = '東京モノレール<br>羽田空港線';
+                            displayText = '東京モノレール<br>　羽田空港線';
                         }
 
                         // まずテキストを設定
@@ -682,13 +694,20 @@ function updateDisplay(NextOrPrevious) {
                             codes.forEach((code) => {
                                 const img = document.createElement('img');
                                 img.src = 'images/line_code/' + code + '.png';
-                                img.alt = code;
                                 img.style.height = '1.2em';
                                 img.style.width = 'auto';
                                 img.style.marginRight = '0.2em';
                                 img.style.verticalAlign = 'middle';
                                 p.insertBefore(img, p.firstChild);
                             });
+                        } else {
+                            const img = document.createElement('img');
+                            img.src = 'images/line_code/other.png';
+                            img.style.height = '1.2em';
+                            img.style.width = 'auto';
+                            img.style.marginRight = '0.2em';
+                            img.style.verticalAlign = 'middle';
+                            p.insertBefore(img, p.firstChild);
                         }
 
                         col.appendChild(p);
