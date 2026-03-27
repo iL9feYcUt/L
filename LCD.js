@@ -711,6 +711,9 @@ function updateDisplay(NextOrPrevious) {
                         // アイコンがある路線なら先頭に img を挿入（複数コード対応）
                         const codes = lineCodeMap[line];
                         if (Array.isArray(codes)) {
+                            // DocumentFragment を使ってコード配列の順序を維持しつつ
+                            // まとめて先頭に挿入する（テキストの前に表示される）
+                            const frag = document.createDocumentFragment();
                             codes.forEach((code) => {
                                 const img = document.createElement('img');
                                 img.src = 'images/line_code/' + code + '.png';
@@ -718,8 +721,9 @@ function updateDisplay(NextOrPrevious) {
                                 img.style.width = 'auto';
                                 img.style.marginRight = '0.2em';
                                 img.style.verticalAlign = 'top';
-                                p.insertBefore(img, p.firstChild);
+                                frag.appendChild(img);
                             });
+                            p.insertBefore(frag, p.firstChild);
                         } else {
                             const img = document.createElement('img');
                             img.src = 'images/line_code/other.png';
