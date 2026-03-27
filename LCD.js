@@ -26,12 +26,12 @@ const stations = [
     ["有楽町", "Yūrakuchō", "ゆうらくちょう", "25", "", "2", ["日比谷線", "有楽町線"]],
     ["東　京", "Tōkyō", "とうきょう", "26", "TYO", "2", ["東北新幹線", "東海道・山陽新幹線", "中央線", "上野東京ライン", "横須賀線", "総武線快速", "京葉線", "丸ノ内線"]],
     ["神　田", "Kanda", "かんだ", "27", "KND", "2", ["中央線", "銀座線"]],
-    ["秋葉原", "Akihabara", "あきはばら", "28", "AKB", "2", ["総武線(各駅停車)", "つくばエクスプレス線", "日比谷線"]],
+    ["秋葉原", "Akihabara", "あきはばら", "28", "AKB", "2", ["総武線(各駅停車)", "つくばエクスプレス", "日比谷線"]],
     ["御徒町", "Okachimachi", "おかちまち", "29", "", "2", ["都営大江戸線"]],
     ["上　野", "Ueno", "うえの", "30", "UEN", "2", ["東北新幹線", "宇都宮線(東北線)", "高崎線", "常磐線", "京成線", "銀座線", "日比谷線"]],
     ["鶯　谷", "Uguisudani", "うぐいすだに", "31", "", "2", []],
-    ["日暮里", "Nippori", "にっぽり", "32", "NPR", "2", ["常磐線", "京成線", "日暮里・舎人ライナー"]],
-    ["西日暮里", "Nishi-Nippori", "にしにっぽり", "33", "", "2", ["日暮里・舎人ライナー", "千代田線"]],
+    ["日暮里", "Nippori", "にっぽり", "32", "NPR", "2", ["常磐線", "京成線", "日暮里·舎人ライナー"]],
+    ["西日暮里", "Nishi-Nippori", "にしにっぽり", "33", "", "2", ["日暮里·舎人ライナー", "千代田線"]],
     ["田　端", "Tabata", "たばた", "34", "", "2", ["山手線（巣鴨・池袋方面）"]],
     ["上中里", "Kami-Nakazato", "かみなかざと", "35", "", "3", []],
     ["王　子", "Ōji", "おうじ", "36", "", "2", ["東京さくらトラム", "南北線"]],
@@ -255,26 +255,26 @@ function textSize() {
         if (p_en.innerText == "Higashi-Jūjō") {
             p_en.style.transform = null;
         } else if (p_en.innerText == "Minami-Urawa") {
-            p_en.style.transform = "scale(0.97,1) translate(-1%,-50%)";
+            p_en.style.transform = "scale(0.96,1) translate(-1%,-50%)";
         } else {
-            p_en.style.transform = "scale(0.92,1) translate(-4%,-50%)";
+            p_en.style.transform = "scale(0.88,0.92) translate(-5%,-50%)";
         }
     } else if (p_en.innerText == "Ishikawachō") {
-        p_en.innerHTML = '<div style="font-size: 0.8em; transform: translateY(28%); line-height:150%;">Ishikawachō<p style="font-size: 0.7em;">（Motomachi·China Town）</p></div>';
+        p_en.innerHTML = '<div style="font-size: 0.8em; transform: translate(1.5vw,28%); line-height:150%;">Ishikawachō<p style="font-size: 0.6em; letter-spacing: 0em;">（Motomachi·China Town）</p></div>';
         p_en.style.transform = "translate(-3%,-78%)";
         p_en.style.letterSpacing = "-0.02em";
     } else if (p_en.textContent.length == 15) {
-        p_en.style.transform = "scale(0.88,1) translate(-6%,-50%)";
+        p_en.style.transform = "scale(0.84,0.92) translate(-8%,-50%)";
     } else if (p_en.textContent.length == 16) {
         if (p_en.innerText == "Takanawa Gateway") {
-            p_en.style.transform = "scale(0.74,1) translate(-16%,-50%)";
+            p_en.style.transform = "scale(0.70,0.86) translate(-18%,-50%)";
         } else {
-            p_en.style.transform = "scale(0.78,1) translate(-14%,-50%)";
+            p_en.style.transform = "scale(0.76,0.86) translate(-16%,-50%)";    
         }
     } else if (p_en.textContent.length == 18) {
-        p_en.style.transform = "scale(0.76,1) translate(-16%,-50%)";
+        p_en.style.transform = "scale(0.73,0.85) translate(-17%,-50%)";
     } else if (p_en.innerText == "Kami-Nakazato") {
-        p_en.style.transform = "scale(0.95,1) translate(-2%,-50%)";
+        p_en.style.transform = "scale(0.92,1) translate(-4%,-50%)";
     } else {
         p_en.style.transform = null;
         p_en.style.letterSpacing = null;
@@ -665,6 +665,8 @@ function updateDisplay(NextOrPrevious) {
                         "南北線": ["N"],
                         "都営大江戸線": ["E"],
                         "都営浅草線": ["A"],
+                        "東海道・山陽新幹線": ["tokaidoS"],
+                        "東北新幹線": ["tohokuS"],
                     };
 
                     transferArr.forEach((line) => {
@@ -674,13 +676,13 @@ function updateDisplay(NextOrPrevious) {
                         // 表示テキスト（既存の特殊ケースは維持）
                         let displayText = line;
                         if (line === "ブルーライン") {
-                            displayText = '横浜市営地下鉄<br>　(ブルーライン)';
+                            displayText = '<span style="display:inline-block;">横浜市営地下鉄<br>ブルーライン</span>';
                         } else if (line === '山手線（渋谷・新宿方面）') {
-                            displayText = '山手線<br>　（渋谷・新宿方面）';
+                            displayText = '<span style="display:inline-block;">山手線<br>(渋谷・新宿方面)</span>';
                         } else if (line === '山手線（巣鴨・池袋方面）') {
-                            displayText = '山手線<br>　（巣鴨・池袋方面）';
+                            displayText = '<span style="display:inline-block;">山手線<br>(巣鴨・池袋方面)</span>';
                         } else if (line === '東京モノレール') {
-                            displayText = '東京モノレール<br>　羽田空港線';
+                            displayText = '<span style="display:inline-block;">東京モノレール<br>羽田空港線</span>';
                         } else if (line === '上野東京ライン') {
                             displayText = '<span style="display:inline-block; transform: scale(0.9,1); transform-origin:left center;">上野東京ライン</span>';
                         } else if (line === 'シーサイドライン') {
@@ -688,9 +690,15 @@ function updateDisplay(NextOrPrevious) {
                         } else if (line === '東海道・山陽新幹線') {
                             displayText = '<span style="display:inline-block; transform: scale(0.87,1); transform-origin:left center;">東海道·山陽新幹線</span>';
                         } else if (line === '東北新幹線') {
-                            displayText = '<p style="display:inline-block; transform: scale(0.73,1); transform-origin:left center;">東北·山形·秋田·北海道·<br>上越·北陸新幹線</p>';
+                            displayText = '<span style="display:inline-block; transform: scale(0.73,1); transform-origin:left center;">東北·山形·秋田·北海道·<br>上越·北陸新幹線</span>';
                         } else if (line === '総武線(各駅停車)') {
-                            displayText = '総武線<br>　(各駅停車)';
+                            displayText = '<span style="display:inline-block;">総武線<br>(各駅停車)</span>';
+                        } else if (line === 'つくばエクスプレス') {
+                            displayText = '<span style="display:inline-block; transform: scale(0.85,1); transform-origin:left center;">つくばエクスプレス</span>';
+                        } else if (line === '日暮里·舎人ライナー') {
+                            displayText = '<span style="display:inline-block; transform: scale(0.8,1); transform-origin:left center;">日暮里·舎人ライナー</span>';
+                        } else if (line === '東武アーバンパークライン') {
+                            displayText = '<span style="display:inline-block; transform: scale(0.78,1); transform-origin:left center;">東武アーバンパークライン</span>';
                         }
 
                         // まずテキストを設定（HTML タグを含む場合は innerHTML を使う）
@@ -709,7 +717,7 @@ function updateDisplay(NextOrPrevious) {
                                 img.style.height = '1.2em';
                                 img.style.width = 'auto';
                                 img.style.marginRight = '0.2em';
-                                img.style.verticalAlign = 'middle';
+                                img.style.verticalAlign = 'top';
                                 p.insertBefore(img, p.firstChild);
                             });
                         } else {
@@ -718,7 +726,7 @@ function updateDisplay(NextOrPrevious) {
                             img.style.height = '1.2em';
                             img.style.width = 'auto';
                             img.style.marginRight = '0.2em';
-                            img.style.verticalAlign = 'middle';
+                            img.style.verticalAlign = 'top';
                             p.insertBefore(img, p.firstChild);
                         }
 
@@ -851,6 +859,21 @@ function updateDisplay(NextOrPrevious) {
             // 通常状態
             stickEl.classList.remove('no-arrow');
             stickEl.classList.remove('triangle-muted');
+        }
+
+        // `triangle-muted` が付いている時は #min を黒に、それ以外は元のスタイルに戻す
+        try {
+            const minEl = document.getElementById('min');
+            if (minEl) {
+                if (stickEl.classList.contains('triangle-muted')) {
+                    minEl.style.color = '#404040';
+                } else {
+                    // 元の CSS に従わせる（CSS で白指定されているため空文字でリセット）
+                    minEl.style.color = '';
+                }
+            }
+        } catch (e) {
+            // ignore
         }
     }
 

@@ -218,7 +218,7 @@ p {
 
 #sn_en {
     display: block;
-    font-size: 8.8vw;
+    font-size: 9.1vw;
     letter-spacing: -0.04em;
     -webkit-text-stroke: 0.25vw #00730a;
 }
@@ -385,6 +385,27 @@ p {
     text-align: center;
 }
 
+#min {
+    position: absolute;
+    font-size: 1.8vw;
+    top: 34.9vw;
+    right: 4.0vw;
+    color: white;
+    font-family: 'ShinGoPro-M';
+}
+
+#min_en {
+    display: none;
+}
+
+#caution {
+    position: absolute;
+    bottom: 0vw;
+    right: 2vw;
+    font-size: 1.2em;
+    font-family: 'ShinGoPro-M';
+}
+
 #stations_ja {
     position: absolute;
     font-family: 'ShinGoPro-M';
@@ -500,6 +521,6 @@ select {
     width: 10.8vw;
 }
 
-#transfer p p {
+#transfer p {
     margin-bottom: 0.1vw;
 }
