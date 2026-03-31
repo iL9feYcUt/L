@@ -596,13 +596,45 @@ function updateDisplay(NextOrPrevious) {
         } else if (english === "Ishikawachō") {
             enStations[i].innerHTML = '<div style="transform: scale(0.75,1) translate(2%,2%);">Ishikawachō</div>';
         } else if (english === "Sakuragichō") {
-            enStations[i].innerHTML = '<div style="transform: scale(0.77,1) translate(-0.4vw,-0.7vw);">Sakuragichō</div>';
+            enStations[i].innerHTML = '<div style="transform: scale(0.77,1) translate(-0.2vw,-0.5vw);">Sakuragichō</div>';
         } else if (english === "Yokohama") {
-            enStations[i].innerHTML = '<div style="transform: scale(0.95,1) translate(-0.7vw,-0.5vw);">Yokohama</div>';
+            enStations[i].innerHTML = '<div style="transform: scale(0.95,1) translate(-0.3vw,-0.1vw);">Yokohama</div>';
         } else if (english === "Higashi-Kanagawa") {
             enStations[i].innerHTML = '<div style="transform: scale(0.9,1) translate(-1vw, -30%);">Higashi-<br><span style="margin-left: 0.5em;">Kanagawa</span></div>';
         } else if (english === "Shin-Koyasu") {
             enStations[i].innerHTML = '<div style="transform: translate(-1vw, -30%);">Shin-<br><span style="margin-left: 1em;">Koyasu</span></div>';
+        } else if (english === "Shinagawa") {
+            enStations[i].innerHTML = '<div style="transform: scale(0.88,1) translate(-0.3vw,-0.1vw);">Shinagawa</div>';
+        } else if (english === "Takanawa Gateway") {
+            enStations[i].innerHTML = '<div style="transform: scale(0.9,1) translate(-0.7vw, -30%);">Takanawa<br><span style="margin-left: 0.5em;">Gateway</span></div>';
+        } else if (english === "Hamamatsuchō") {
+            enStations[i].innerHTML = '<div style="transform: scale(0.8,1) translate(-0.7vw, -30%);">Hamamatsu<br><span style="margin-left: 3.5em;">chō</span></div>';
+        } else if (english === "Shimbashi") {
+            enStations[i].innerHTML = '<div style="transform: scale(0.9,1) translate(-0.3vw,-0.1vw);">Shimbashi</div>';
+        } else if (english === "Yūrakuchō") {
+            enStations[i].innerHTML = '<div style="transform: scale(0.9,1) translate(-0.3vw,-0.1vw);">Yūrakuchō</div>';
+        } else if (english === "Akihabara") {
+            enStations[i].innerHTML = '<div style="transform: scale(0.95,1) translate(-0.3vw,-0.1vw);">Akihabara</div>';
+        } else if (english === "Okachimachi") {
+            enStations[i].innerHTML = '<div style="transform: scale(0.8,1) translate(-0.7vw, -30%);">Okachimachi    </div>';
+        } else if (english === "Uguisudani") {
+            enStations[i].innerHTML = '<div style="transform: scale(0.86,1) translate(-0.3vw,-0.1vw);">Uguisudani</div>';
+        } else if (english === "Nishi-Nippori") {
+            enStations[i].innerHTML = '<div style="transform: translate(-1vw, -30%);">Nishi-<br><span style="margin-left: 1.5em;">Nippori</span></div>';
+        } else if (english === "Kami-Nakazato") {
+            enStations[i].innerHTML = '<div style="transform: translate(-1vw, -30%);">Kami-<br><span style="margin-left: 0.5em;">Nakazato</span></div>';
+        } else if (english === "Higashi-Jūjō") {
+            enStations[i].innerHTML = '<div style="transform: translate(-1vw, -30%);">Higashi-<br><span style="margin-left: 2.8em;">Jūjō</span></div>';
+        } else if (english === "Kawaguchi") {
+            enStations[i].innerHTML = '<div style="transform: scale(0.86,1) translate(-0.3vw,-0.1vw);">Kawaguchi</div>';
+        } else if (english === "Nishi-Kawaguchi") {
+            enStations[i].innerHTML = '<div style="transform: scale(0.85,1) translate(-1vw, -30%);">Nishi-<br><span style="margin-left: 0.5em;">Kawaguchi</span></div>';
+        } else if (english === "Minami-Urawa") {
+            enStations[i].innerHTML = '<div style="transform: translate(-1vw, -30%);">Minami-<br><span style="margin-left: 1.7em;">Urawa</span></div>';
+        } else if (english === "Kita-Urawa") {
+            enStations[i].innerHTML = '<div style="transform: translate(-1vw, -30%);">Kita-<br><span style="margin-left: 1.7em;">Urawa</span></div>';
+        } else if (english === "Saitama-Shintoshin") {
+            enStations[i].innerHTML = '<div style="transform: scale(0.88,1) translate(-1vw, -30%);">Saitama-<br><span style="margin-left: 0.5em;">Shintoshin</span></div>';
         } else {
             enStations[i].textContent = english;
         }

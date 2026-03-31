@@ -414,11 +414,12 @@ p {
     text-align: end;
     line-height: 100%;
     bottom: 24vw;
+    display: none;
 }
 
 #stations_en {
     position: absolute;
-    display: none;
+    display: flex;
     font-family: 'Helvetica';
     font-size: 3.6vw;
     line-height: 100%;
